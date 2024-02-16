@@ -1,0 +1,13 @@
+.container {
+    flex-direction: row;
+    // height: 54px;
+    flex: .1;
+    align-items: center;
+}
+.dot {
+    border-radius: 10px;
+    margin: 0 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #F55926;
+}
