@@ -38,8 +38,18 @@
     },
     "extra": {
       "eas": {
-        "projectId": "1d6d8069-2061-4c4e-9047-98dd38d3088a"
+        "projectId": "198e719c-5621-4a60-b531-d0f9b35559a2"
       }
-    }
+    },
+    "owner": "nanalit",
+    "plugins": [
+      "@react-native-firebase/app", "@react-native-firebase/auth",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
   }
 }
