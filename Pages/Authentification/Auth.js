@@ -47,7 +47,7 @@ export default function Auth({ navigation }) {
     <SafeAreaView style={styled.auth}>
     <Image style={styled.back} source={icons.backRed} />
     <View style={styled.wrapper}>
-        <Header onPress={() => navigation.navigate("Main")} isWhite={true} />
+        <Header onPress={() => navigation.goBack()} isWhite={true} />
         <Image style={styled.image} source={icons.headerName} />
         <Text style={styled.auth__started}>{t("getStarted")}</Text>
         <Image style={styled.auth__img} source={icons.first} />

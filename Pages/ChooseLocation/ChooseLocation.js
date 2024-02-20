@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Text, View, Image, Alert} from 'react-native';
+import { Text, View, Image, Alert, SafeAreaView} from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient';
 import * as Location from 'expo-location';
 import MapView, {Marker, PROVIDER_GOOGLE, PROVIDER_DEFAULT } from 'react-native-maps';
@@ -13,8 +13,8 @@ import {icons} from "../../constants";
 import Header from '../../Components/Header/Header';
 import styled from "./style.scss";
 export default function ChooseLocation({ navigation }) {
-    const latitude = useSelector(state => state.latitude);
-    const longitude = useSelector(state => state.longitude);
+    const latitude = useSelector(state => state.userInfo.latitude);
+    const longitude = useSelector(state => state.userInfo.longitude);
     const dispatch = useDispatch();
     const {t} = useTranslation();
 	const [location, setLocation] = useState();
@@ -50,7 +50,7 @@ export default function ChooseLocation({ navigation }) {
                     let address = `${item.name}, ${item.street}, ${item.postalCode}, ${item.city}`;
               
                 setDisplayCurrentAddress(address);
-                localStorage.setItem("address", displayCurrentAddress);
+                // localStorage.setItem("address", displayCurrentAddress);
             }
         } }
         const CheckIfLocationEnabled = async () => {
@@ -71,7 +71,7 @@ export default function ChooseLocation({ navigation }) {
     const snapPoints = useMemo(() => ["45%", "5%"], []);
   return (
     
-        <View style={styled.choose}>
+        <SafeAreaView style={styled.choose}>
             <Header onPress={() => navigation.goBack()} isButtons={false}/>
             <View 
             style={{
@@ -89,16 +89,14 @@ export default function ChooseLocation({ navigation }) {
                          let response = await Location.reverseGeocodeAsync({
                             latitude : e.nativeEvent.coordinate.latitude,
                             longitude: e.nativeEvent.coordinate.longitude
-                        })
-                        for (let item of response) {
-                            let address = `${item.name}, ${item.street}, ${item.postalCode}, ${item.city}`;
-                            setDisplayCurrentAddress(address)
-                            if(item.city?.indexOf('Riyadh') || item.city?.indexOf('الرياض')) {
-                                setAvailable(true)
-                            } else {
-                                setAvailable(false)
-                            }
-                        }
+                            })
+                                let address = `${item.name}, ${item.street}, ${item.postalCode}, ${item.city}`;
+                                setDisplayCurrentAddress(address)
+                                // if(item.city?.indexOf('Riyadh') || item.city?.indexOf('الرياض')) {
+                                //     setAvailable(true)
+                                // } else {
+                                //     setAvailable(false)
+                                // }
                     }
                         getPermissions2();
                     }}
@@ -144,11 +142,14 @@ export default function ChooseLocation({ navigation }) {
                         <BtnButton onPress={() => {
                             navigation.navigate("ApplyLocation");
                             dispatch(addr(displayCurrentAddress))
-                        }} title={t('add')} buttonStyle={{backgroundColor: '#F55926', opacity: available ? 1 : 0.7, pointerEvents: available ? 'auto' : 'none'}} textStyle={{color: 'rgba(244, 237, 225, 1)'}}/>
+                        }} title={t('add')} buttonStyle={{backgroundColor: '#F55926', 
+                        // opacity: available ? 1 : 0.7, 
+                        // pointerEvents: available ? 'auto' : 'none'
+                        }} textStyle={{color: 'rgba(244, 237, 225, 1)'}}/>
                 </View>
             </BottomSheet>
             </View>
-    </View>
+    </SafeAreaView>
     
     
   );

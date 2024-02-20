@@ -8,25 +8,31 @@ const initialState = {language: 'en',
                             userName: "John Dou",
                             userAge: 23
                         },
-                        
-                        plan: {
-                            sum: 1000,
-                            long: 'sar/hellp'
-                        },
+                      
                         childrens: {
                             children1: {
                                 gender: '',
                                 name: '',
                                 lastName: '',
                                 age: 15,
-                                photo: ''
+                                photo: '',
+                                deliveryDetails: {
+                                    area: '',
+                                    building: '',
+                                    flat: '',
+                                    street: '',
+                                    delideryInsrtuctions: '',
+                                    time: 'morning',
+                                    date: 'Friday, February2, 2024'
+                                },
+                                plan: {
+                                    sum: 1000,
+                                    long: 'sar/hellp'
+                                },
                             }
                             
                         },
-                        deliveryDatails: {
-                            time: 'morning',
-                            date: 'Friday, February2, 2024'
-                        }
+                       
                     };
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -141,33 +147,132 @@ const reducer = (state = initialState, action) => {
         case 'SUM': 
             return {
                 ...state,
-                plan: {
-                    ...state.plan,
-                    sum: action.payload,
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        plan: {
+                            ...state.childrens.children1.plan,
+                            sum: action.payload,
+                            
+                        }
+                    }
                 }
+                
             }
         case 'LONG': 
             return {
                 ...state,
-                plan: {
-                    ...state.plan,
-                    long: action.payload
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        plan: {
+                            ...state.childrens.children1.plan,
+                            long: action.payload,
+                            
+                        }
+                    }
                 }
             }
         case 'TIME': 
             return {
                 ...state,
-                deliveryDatails: {
-                    ...state.deliveryDatails,
-                    time: action.payload
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        deliveryDetails: {
+                            ...state.childrens.children1.deliveryDetails,
+                            time: action.payload
+                            
+                        }
+                    }
                 }
+                
             }
         case 'DATE': 
             return {
                 ...state,
-                deliveryDatails: {
-                    ...state.deliveryDatails,
-                    date: action.payload
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        deliveryDetails: {
+                            ...state.childrens.children1.deliveryDetails,
+                            date: action.payload
+                        }
+                    }
+                }
+            }
+        case 'AREA': 
+            return {
+                ...state,
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        deliveryDetails: {
+                            ...state.childrens.children1.deliveryDetails,
+                            area: action.payload
+                        }
+                    }
+                }
+            }
+        case 'BUILDING': 
+            return {
+                ...state,
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        deliveryDetails: {
+                            ...state.childrens.children1.deliveryDetails,
+                            building: action.payload
+                        }
+                    }
+                }
+            }
+        case 'FLAT': 
+            return {
+                ...state,
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        deliveryDetails: {
+                            ...state.childrens.children1.deliveryDetails,
+                            flat: action.payload
+                        }
+                    }
+                }
+            }
+        case 'STREET': 
+            return {
+                ...state,
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        deliveryDetails: {
+                            ...state.childrens.children1.deliveryDetails,
+                            street: action.payload
+                        }
+                    }
+                }
+            }
+        case 'INSTRUCTIONS': 
+            return {
+                ...state,
+                childrens: {
+                    ...state.childrens,
+                    children1: {
+                        ...state.childrens.children1,
+                        deliveryDetails: {
+                            ...state.childrens.children1.deliveryDetails,
+                            delideryInsrtuctions: action.payload
+                        }
+                    }
                 }
             }
 		default:

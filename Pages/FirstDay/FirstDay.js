@@ -13,8 +13,8 @@ import CalendarPicker from "react-native-calendar-picker";
 export default function FirstDay({ navigation }) {
 
   let {t} = useTranslation();
-  const num = useSelector(state => state.plan.sum);
-  const long = useSelector(state => state.plan.long);
+  const num = useSelector(state => state.childrens.children1.plan.sum);
+  const long = useSelector(state => state.childrens.children1.plan.long);
   const [active, setActive] = useState('morning');
   const [calendar, setCalendar] = useState(false);
 
@@ -122,7 +122,7 @@ export default function FirstDay({ navigation }) {
               <Text style={[styled.calendar__price, {fontSize: RFValue ( 64,  740)}]}>{num}</Text>
               <Text style={[styled.calendar__text, {fontSize: RFValue ( 14,  740)}]}>{long}</Text>
             </View>
-        <BtnButton onPress={() => {navigation.navigate("Auth")
+        <BtnButton onPress={() => {navigation.navigate("Location")
                                   dispatch(time(active))
                                   dispatch(time(`${weekDay}, ${mounth} ${day},  ${year}`))}} title={t('continue')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', marginBottom: 80}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
          <View style={styled.calendar__backDown}>

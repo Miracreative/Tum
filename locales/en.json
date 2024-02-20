@@ -41,5 +41,22 @@
     "morning": "7 AM to 11 AM (Morning)",
     "evening": "6 PM to 10 PM (the night before)",
     "daystext": "You can always skip a day or make changes from your settings. This is a weekly ongoing subscribtion. You can stop it it any time.",
-    "total": "Total Amount"
+    "total": "Total Amount",
+    "registration": "Registration",
+    "noInetTitle": "no internet connection",
+    "noInetText": "Check your internet connection",
+    "editAddress": "Edit Address",
+    "home": "Home",
+    "area": "Area",
+    "building": "Building",
+    "flat": "Flat",
+    "street": "Street",
+    "instructions": "Delivery instructions",
+    "deliveryAddress": "Delivery address",
+    "whatChange": "if you want to change the name and phone number of the delivery please change",
+    "change": "Change",
+    "method": "Payment method",
+    "creditCard": "Credit Card",
+    "applePay": "Apple Pay"
+    
 }
