@@ -1,5 +1,5 @@
-import React, { useState, useEffect, createContext } from 'react';
-import { Text, View,  TouchableOpacity, FlatList, Image, ImageBackground,  SafeAreaView, StatusBar} from 'react-native';
+import React from 'react';
+import {View, Image, ImageBackground,  SafeAreaView, } from 'react-native';
 import styled from './style.scss';
 import {icons} from "../../constants";
 import BtnButton from '../../Components/Button/Button';
@@ -29,8 +29,8 @@ export default function Main({ navigation}) {
 					<Slider />
 				</View>
 				<View style={{flex: 0.2, marginBottom: 20}}>
-					<BtnButton onPress={() => {navigation.navigate('Location')}} title={t('getStarted')} buttonStyle={{marginTop: 15, backgroundColor:"#F55926"}} textStyle={{color: 'rgba(244, 237, 225, 1)'}} arrow={true} />
-					<BtnButton onPress={() => navigation.navigate('Name')} title={t('logIn')} buttonStyle={{marginTop: 15, marginBottom: 20 }} textStyle={{color: 'black'}}/>
+					<BtnButton onPress={() => {navigation.navigate('Email')}} title={t('getStarted')} buttonStyle={{marginTop: 15, backgroundColor:"#F55926"}} textStyle={{color: 'rgba(244, 237, 225, 1)'}} arrow={true} />
+					<BtnButton onPress={() => navigation.navigate('Auth')} title={t('logIn')} buttonStyle={{marginTop: 15, marginBottom: 20 }} textStyle={{color: 'black'}}/>
 					
 				</View>
 			</SafeAreaView>

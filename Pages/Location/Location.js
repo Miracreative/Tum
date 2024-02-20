@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, SafeAreaView, Image} from 'react-native';
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import {useTranslation} from 'react-i18next';
 import BtnButton from '../../Components/Button/Button';
 import {icons} from "../../constants";
@@ -21,11 +22,11 @@ export default function Location({ navigation }) {
         }}>
      
             <Text
-                style={styled.location__title}>
+                style={[styled.location__title, {fontSize: RFValue ( 22,  740)}]}>
                 {t('locationTitle')}
             </Text>
             <Text
-                style={styled.location__text}>
+                style={[styled.location__text, {fontSize: RFValue ( 14,  740)}]}>
                 {t('locationText')}
             </Text>
             <View

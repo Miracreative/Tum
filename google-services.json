@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "558836615804",
+      "project_id": "tummiesapp",
+      "storage_bucket": "tummiesapp.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:558836615804:android:982ddbbe7a36b7c10157f9",
+          "android_client_info": {
+            "package_name": "com.nanalit.newsApp"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCR5v4Df74JXiE7Y_LTIfn05TvVJJbsYmE"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

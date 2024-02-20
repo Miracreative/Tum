@@ -1,0 +1,73 @@
+.choose {
+    flex: 1;
+    background-color: rgba(244, 237, 225, 1);
+    position: relative;
+    &__img {
+        height: 150px;
+        width: 120px;
+        object-fit: contain;
+        margin: 20px auto;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        color: black;
+        margin: 0 auto 20px;
+    }
+    &__text {
+        font-weight: 300;
+        color: black;
+        text-align: center;
+        margin: 0 auto 20px;
+        font-size: 36px;
+    }
+    &__map {
+        position: absolute;
+        top: -90px;
+        left: 0;
+        z-index: -2;
+        width: 100%;
+        height: 120%;
+    }
+    &__gradient {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }
+    &__pin {
+        width: 30px;
+        height: 34px;
+        object-fit: cover;
+    }
+    &__info {
+        height: 40%;
+        margin-top: 130%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: red;
+        border-radius: 20px 20px 0px 0px;
+    }
+    &__address {
+        width: 220px;
+        margin: 0 auto 50px;
+        font-weight: 500;
+        color: rgba(12, 3, 0, 1);
+        font-size: 20px;
+        text-align: center;
+    }
+    &__image {
+        margin: 20px auto 5px;
+    }
+    &__modal {
+        flex: 1;
+        background-color: transparent;
+    }
+}
+.image {
+    width:80%;
+    margin: 0 auto;
+    object-fit: contain;
+}

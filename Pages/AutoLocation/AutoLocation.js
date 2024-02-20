@@ -77,6 +77,7 @@ export default function AutoLocation({ navigation }) {
     }, [])
     const snapPoints = useMemo(() => ["45%", "5%"], []);
 
+
     // const geocode = async () => {
     //     const geocodedLocation = await Location.geocodeAsync(address)
     //     console.log(geocodedLocation)
@@ -125,7 +126,7 @@ export default function AutoLocation({ navigation }) {
                             source={icons.pin} />
                     </Marker>
                 </MapView>
-                {/* <BottomSheet 
+                <BottomSheet 
                     index={0}
                     snapPoints={snapPoints}
                     backgroundStyle={borderRadius= '20px 20px 0 0' }
@@ -143,7 +144,7 @@ export default function AutoLocation({ navigation }) {
                                 dispatch(build1(building))
                             }} title={t('add')} buttonStyle={{backgroundColor: '#F55926'}} textStyle={{color: 'rgba(244, 237, 225, 1)'}}/>
                     </View>
-                </BottomSheet> */}
+                </BottomSheet>
             </SafeAreaView>
     </View>
     

@@ -6,8 +6,9 @@ import Gender from './Pages/Gender/Gender';
 import Results from './Pages/Results/Results';
 import Location from './Pages/Location/Location';
 import AutoLocation from './Pages/AutoLocation/AutoLocation';
-// import Autentification from './Pages/Autentification/Autentification';
-// import AutentificationConfirm from './Pages/AutentificationConfirm/AutentificationConfirm';
+import FirstDay from './Pages/FirstDay/FirstDay';
+import Auth from './Pages/Authentification/Auth';
+import AuthConfirm from './Pages/AuthentificationConfirm/AuthentificationConfirm';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -47,6 +48,10 @@ export default function Navigate() {
                 name="Results"
                 component={Results}
             />
+            <Stack.Screen
+                name="FirstDay"
+                component={FirstDay}
+            />
 
             <Stack.Screen
                 name="Location"
@@ -58,15 +63,15 @@ export default function Navigate() {
                 component={AutoLocation}
             />
 
-            {/* <Stack.Screen
-                name="Autentification"
-                component={Autentification}
+            <Stack.Screen
+                name="Auth"
+                component={Auth}
             />
 
             <Stack.Screen
-                name="AutentificationConfirm"
-                component={AutentificationConfirm}
-            /> */}
+                name="AuthConfirm"
+                component={AuthConfirm}
+            />
         </Stack.Navigator>
     </NavigationContainer>;
    

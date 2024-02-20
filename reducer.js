@@ -4,6 +4,7 @@ const initialState = {language: 'en',
                             latitude: 24.6877,
                             longitude: 46.7219,
                             email: "user@mail.com",
+                            phone: null,
                             userName: "John Dou",
                             userAge: 23
                         },
@@ -72,6 +73,14 @@ const reducer = (state = initialState, action) => {
             userInfo: {
                 ...state.userInfo,
                 email: action.payload
+            }
+        }
+        case 'PHONE': 
+        return {
+            ...state,
+            userInfo: {
+                ...state.userInfo,
+                phone: action.payload
             }
         }
         case 'GENDER1':
