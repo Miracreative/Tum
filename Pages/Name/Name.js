@@ -18,7 +18,7 @@ export default function Name({ navigation }) {
   const [validName, setValidName] = useState(true);
   const [lastName, setLastName] = useState('');
   const [validLastName, setValidLastName] = useState(true);
-  const [age, setAge] = useState('');
+  const [age, setAge] = useState(null);
   const [validAge, setValidAge] = useState(true);
   const [disable, setDisable] = useState(true);
   const [image, setImage] = useState(null);
@@ -29,7 +29,7 @@ export default function Name({ navigation }) {
     if (text.length >=2) {
       setName(text)
       setValidName(true)
-      if(validName, validLastName, validAge) {
+      if(validName && validLastName && validAge && name.length >=2 && lastName.length >= 2 && age) {
         setDisable(false)
       }  
     }
@@ -44,7 +44,7 @@ export default function Name({ navigation }) {
     if (text.length >=2) {
       setLastName(text)
       setValidLastName(true)
-      if(validName, validLastName, validAge) {
+      if(validName && validLastName && validAge && name.length >=2 && lastName.length >= 2 && age) {
         setDisable(false)
       }  
     }
@@ -62,7 +62,7 @@ export default function Name({ navigation }) {
       setAge(text)
       if( ((3 <= text) && (text <= 16))) {
         setValidAge(true)
-        if(validName, validLastName) {
+        if(validName && validLastName && validAge && name.length >=2 && lastName.length >= 2 ) {
           setDisable(false)
         } else {
           setDisable(true)
@@ -101,7 +101,7 @@ export default function Name({ navigation }) {
           <ImageBackground
                   resizeMode='cover'
                   style={{flex: 1}}
-                  source={icons.backFull}>
+                  source={icons.backSmall}>
                     <SafeAreaView style={{flex: 1, justifyContent: 'space-between', alignItems: 'center'}}>
                       <TouchableWithoutFeedback onPress={() => {
                                                           Keyboard.dismiss()
@@ -119,7 +119,7 @@ export default function Name({ navigation }) {
                               resizeMode='contain'
                                 style={{ width: 120, height: 120}}
                                 source={icons.photoPhone} >
-                                {image? <Image source={{ uri: image }} style={{ width: 90, height: 90, borderRadius: 100, marginTop: 17, marginLeft: 13, borderWidth: 2, borderColor: 'white' }} /> :
+                                {image? <Image source={{ uri: image }} style={{ width: 90, height: 90, borderRadius: 100, marginTop: 17, marginLeft: 13, borderWidth: 2, borderColor: 'white', borderStyle: 'solid' }} /> :
                                 <Image source={gender1 == 'boy' ? icons.boyRing : icons.girlRing} style={{ width: 90, height: 90, borderRadius: 100, marginTop: 17, marginLeft: 13 }} />
                                 }
                               </ImageBackground>
@@ -130,7 +130,7 @@ export default function Name({ navigation }) {
                                   style={[styled.name__input, {borderColor: validName ? 'rgba(12, 3, 0, 0.5)' : 'rgba(245, 89, 38, 1)'}]}
                                   onChangeText={text => {validateName(text)}}
                                   onFocus={() => {setIsShowKeyboard(true)}}
-                                  value={name.toString()}
+                                  value={name}
                                   onSubmitEditing={() => {Keyboard.dismiss; setIsShowKeyboard(false) }}
                               />
                             <Text style={[styled.name__text, {fontSize: RFValue ( 20,  740)}]}>{t('lastName')}</Text>
@@ -138,7 +138,7 @@ export default function Name({ navigation }) {
                                   style={[styled.name__input, {borderColor: validLastName ? 'rgba(12, 3, 0, 0.5)' : 'rgba(245, 89, 38, 1)'}]}
                                   onChangeText={text => {validateLastName(text)}}
                                   onFocus={() => {setIsShowKeyboard(true)}}
-                                  value={lastName.toString()}
+                                  value={lastName}
                                   onSubmitEditing={() => {Keyboard.dismiss; setIsShowKeyboard(false) }}
                               />
                             <Text style={[styled.name__text, {fontSize: RFValue ( 20,  740)}]}>{t('age')}</Text>
@@ -147,7 +147,7 @@ export default function Name({ navigation }) {
                                   keyboardType='numeric'
                                   onChangeText={text => {validateAge(+text)}}
                                   onFocus={() => {setIsShowKeyboard(true)}}
-                                  value={age.toString()}
+                                  value={age}
                                   onSubmitEditing={() => {Keyboard.dismiss; setIsShowKeyboard(false) }}
                               />
                             <BtnButton onPress={() => {dispatch(name1(name))

@@ -1,4 +1,4 @@
-export const languages = () => ({type: "LNG"});
+export const lang = () => ({type: "LNG"});
 export const addr = (place) => ({type: "LOCATION", payload: place});
 export const lat = (coord) => ({type: "LATITUDE", payload: coord});
 export const long = (coord) => ({type: "LONGITUUDE", payload: coord});
@@ -13,3 +13,8 @@ export const time = (t) => ({type: "TIME", payload: t});
 export const date = (d) => ({type: "DATE", payload: d});
 export const userEmail = (email) => ({type: "EMAIL", payload: email});
 export const userPhone = (phone) => ({type: "PHONE", payload: phone});
+export const area1 = (ar) => ({type: "AREA", payload: ar});
+export const street1 = (st) => ({type: "STREET", payload: st});
+export const build1 = (b) => ({type: "BUILDING", payload: b});
+export const flat1 = (f) => ({type: "FLAT", payload: f});
+export const instr1 = (d) => ({type: "INSTRUCTIONS", payload: d});
