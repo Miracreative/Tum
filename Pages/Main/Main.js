@@ -29,7 +29,7 @@ export default function Main({ navigation}) {
 					<Slider />
 				</View>
 				<View style={{flex: 0.2, marginBottom: 20}}>
-					<BtnButton onPress={() => {navigation.navigate('Begin')}} title={t('getStarted')} buttonStyle={{marginTop: 15, backgroundColor:"#F55926"}} textStyle={{color: 'rgba(244, 237, 225, 1)'}} arrow={true} />
+					<BtnButton onPress={() => {navigation.navigate('PersonalCabenet')}} title={t('getStarted')} buttonStyle={{marginTop: 15, backgroundColor:"#F55926"}} textStyle={{color: 'rgba(244, 237, 225, 1)'}} arrow={true} />
 					<BtnButton onPress={() => navigation.navigate('Auth')} title={t('logIn')} buttonStyle={{marginTop: 15, marginBottom: 20 }} textStyle={{color: 'black'}}/>
 					
 				</View>

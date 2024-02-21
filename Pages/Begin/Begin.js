@@ -50,7 +50,7 @@ export default function Begin({ navigation }) {
                     </ImageBackground>
                 </View>
                 <BtnButton onPress={() => {dispatch(gen1(gender))
-                                            navigation.navigate('Name')}
+                                            navigation.navigate('PersonalCabenet')}
                                             } title={t('begin')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', marginBottom: 40}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
               </SafeAreaView>
           </ImageBackground>

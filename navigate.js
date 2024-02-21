@@ -13,6 +13,7 @@ import Auth from './Pages/Authentification/Auth';
 import AuthConfirm from './Pages/AuthentificationConfirm/AuthentificationConfirm';
 import DeliveryDetails from './Pages/DeliveryDetails/DeliveryDetails';
 import Begin from './Pages/Begin/Begin';
+import PersonalCabenet from './Pages/PersonalCabenet/PersonalCabent';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -92,6 +93,11 @@ export default function Navigate() {
             <Stack.Screen
                 name="Begin"
                 component={Begin}
+            />
+
+            <Stack.Screen
+                name="PersonalCabenet"
+                component={PersonalCabenet}
             />
         </Stack.Navigator>
     </NavigationContainer>;
