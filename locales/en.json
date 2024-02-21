@@ -57,6 +57,8 @@
     "change": "Change",
     "method": "Payment method",
     "creditCard": "Credit Card",
-    "applePay": "Apple Pay"
+    "applePay": "Apple Pay",
+    "begin": "To begin",
+    "letsGo": "Everything is ready, let's get started"
     
 }

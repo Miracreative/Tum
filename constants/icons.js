@@ -37,6 +37,10 @@ const backRedFull = require("./../assets/icons/back-red-full.png")
 const photoPhone = require("./../assets/icons/photo-phone.png")
 const visa = require("./../assets/icons/visa.png")
 const applePay = require("./../assets/icons/apple-pay.png")
+const flower = require("./../assets/icons/flower.png")
+const star = require("./../assets/icons/star.png")
+const potato = require("./../assets/icons/patato.png")
+
 
 
 export default {
@@ -79,4 +83,7 @@ export default {
     photoPhone,
     visa,
     applePay,
+    flower,
+    star,
+    potato
 }
