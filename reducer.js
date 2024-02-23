@@ -6,7 +6,8 @@ const initialState = {language: 'en',
                             email: "user@mail.com",
                             phone: null,
                             userName: "John Dou",
-                            userAge: 23
+                            userAge: 23,
+                            cardNumber: null
                         },
                       
                         childrens: {

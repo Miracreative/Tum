@@ -40,6 +40,7 @@ const applePay = require("./../assets/icons/apple-pay.png")
 const flower = require("./../assets/icons/flower.png")
 const star = require("./../assets/icons/star.png")
 const potato = require("./../assets/icons/patato.png")
+const toRight = require("./../assets/icons/to-right.png")
 
 
 
@@ -85,5 +86,6 @@ export default {
     applePay,
     flower,
     star,
-    potato
+    potato,
+    toRight
 }

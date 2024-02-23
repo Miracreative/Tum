@@ -59,6 +59,13 @@
     "creditCard": "Credit Card",
     "applePay": "Apple Pay",
     "begin": "To begin",
-    "letsGo": "Everything is ready, let's get started"
-    
+    "letsGo": "Everything is ready, let's get started",
+    "addCard": " Add card",
+    "lang": "Language",
+    "english": "English",
+    "arabian": "Arabic",
+    "history": "Payment history",
+    "dishes": "Favorite dishes",
+    "logOut": "Log out",
+    "family": "family"
 }
