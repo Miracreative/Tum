@@ -52,6 +52,7 @@ export default function PersonalCabenet({ navigation }) {
                             {image? <Image source={{ uri: image }} style={{ width: 120, height: 120, borderRadius: 120, marginTop: 17, marginLeft: 13, borderWidth: 2, borderColor: 'white', borderStyle: 'solid' }} /> :
                             <Image source={icons.boyRing} style={{ width: 120, height: 120, borderRadius: 120, marginTop: 17, marginLeft: 13 }} />
                             }
+                        <Text></Text>
                         </ImageBackground>
                     </TouchableOpacity>
                     </ScrollView>
