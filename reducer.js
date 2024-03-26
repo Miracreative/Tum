@@ -6,7 +6,8 @@ const initialState = {language: 'en',
                             email: "user@mail.com",
                             phone: null,
                             userName: "John Dou",
-                            userAge: 23
+                            userAge: 23,
+                            cardNumber: null
                         },
                       
                         childrens: {
@@ -29,6 +30,16 @@ const initialState = {language: 'en',
                                     sum: 1000,
                                     long: 'sar/hellp'
                                 },
+                                warnings: {
+                                    Fish: false,
+                                    Beef: false,
+                                    Seafoods: false,
+                                    Chicken: false,
+                                    Broccaly: false,
+                                    Eggs: false,
+                                    Shugar: true,
+                                    Bread: false
+                                }
                             }
                             
                         },
