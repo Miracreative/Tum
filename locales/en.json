@@ -67,14 +67,10 @@
     "history": "Payment history",
     "dishes": "Favorite dishes",
     "logOut": "Log out",
-<<<<<<< HEAD
     "family": "family",
     "packages": "Packages & days",
     "warning": "Ingredient warnings",
     "address": "Address",
     "deliveryTime": "Delivery time",
     "manage": "Manage subscription"
-=======
-    "family": "family"
->>>>>>> 62687d42212b74697929912415502af4315ad2a2
 }
