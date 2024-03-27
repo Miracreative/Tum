@@ -156,7 +156,7 @@ export default function Name({ navigation }) {
                                           dispatch(photo1(image))
                                           setIsShowKeyboard(false)
                                           Keyboard.dismiss
-                                          navigation.navigate("Results")}} title={t('next')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', marginBottom: 30, opacity: (disable) ? .7 : 1, pointerEvents: (disable) ? 'none' : 'auto'}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
+                                          navigation.navigate("FirstDay")}} title={t('next')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', marginBottom: 30, opacity: (disable) ? .7 : 1, pointerEvents: (disable) ? 'none' : 'auto'}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
                           </View>
                       </TouchableWithoutFeedback>
                       

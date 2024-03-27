@@ -41,7 +41,6 @@ const flower = require("./../assets/icons/flower.png")
 const star = require("./../assets/icons/star.png")
 const potato = require("./../assets/icons/patato.png")
 const toRight = require("./../assets/icons/to-right.png")
-<<<<<<< HEAD
 const supportMenu = require("./../assets/icons/support-menu.png")
 const deliveryMenu = require("./../assets/icons/delivery-menu.png")
 const accountMenu = require("./../assets/icons/account-menu.png")
@@ -52,8 +51,6 @@ const deliveryMenuActive = require("./../assets/icons/delivery-menu-active.png")
 const accountMenuActive = require("./../assets/icons/account-menu-active.png")
 const entertaimentMenuActive = require("./../assets/icons/entertaiment-menu-active.png")
 const cateringMenuActive = require("./../assets/icons/catering-menu-active.png")
-=======
->>>>>>> 62687d42212b74697929912415502af4315ad2a2
 
 
 
@@ -100,7 +97,6 @@ export default {
     flower,
     star,
     potato,
-<<<<<<< HEAD
     toRight,
     supportMenu,
     deliveryMenu,
@@ -112,7 +108,4 @@ export default {
     accountMenuActive,
     entertaimentMenuActive,
     cateringMenuActive,
-=======
-    toRight
->>>>>>> 62687d42212b74697929912415502af4315ad2a2
 }

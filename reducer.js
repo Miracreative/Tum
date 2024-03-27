@@ -48,14 +48,19 @@ const initialState = {language: 'en',
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case 'LNG': 
+        // return {
+        //     ...state,
+        //     userInfo: action.payload
+            
+        // }
             if(state.language == 'en') {
                 return {
-                    ...state,
+                    // ...state,
                     language: 'ar'
                 }
             } else if(state.language == 'ar') {
                 return {
-                    ...state,
+                    // ...state,
                     language: 'en'
                 }
             }

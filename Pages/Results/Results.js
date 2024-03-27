@@ -220,7 +220,7 @@ export default function Results({ navigation }) {
                 <BtnButton onPress={() => {
                                             dispatch(price(planDescriptions[long].sum))
                                             dispatch(lon(planDescriptions[long].long))
-                                            navigation.navigate("FirstDay")}} title={t('next')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', marginBottom: 30}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
+                                            navigation.navigate("Gender")}} title={t('next')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', marginBottom: 30}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
             </ScrollView>
         </SafeAreaView>
     );

@@ -14,7 +14,6 @@ export default function PersonalCabenet({ navigation }) {
 	
     const {t} = useTranslation();
 
-    const currentLanguage = useSelector(state => state.language);
 
     const currentLanguage = useSelector(state => state.language);
     const currentPhone = useSelector(state => state.userInfo.phone);

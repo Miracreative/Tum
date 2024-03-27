@@ -26,20 +26,20 @@ const Tab = createBottomTabNavigator()
 function TabNavigator() {
   return (
         <Tab.Navigator
-            // tabBarOptions={{
-            //     showLabel: false,
-            //     style:{
-            //         position: 'absolute',
-            //         bottom: 30, 
-            //         left: 30, 
-            //         right: 30, 
-            //         elevation: 0,
-            //         backgroundColor: "blue",
-            //         borderRadius: 20,
-            //         height: 60,
+            tabBarOptions={{
+                showLabel: false,
+                style:{
+                    position: 'absolute',
+                    bottom: 30, 
+                    left: 30, 
+                    right: 30, 
+                    elevation: 0,
+                    backgroundColor: "blue",
+                    borderRadius: 20,
+                    height: 60,
 
-            //     }
-            // }}
+                }
+            }}
             screenOptions={
                 ({ route }) => ({
                 tabBarIcon: ({ focused }) => {
@@ -47,7 +47,7 @@ function TabNavigator() {
                     if (route.name === 'Support') {
                     iconName = focused ? icons.supportMenuActive : icons.supportMenu;
                     } else if (route.name === 'Delivery') {
-                        iconName = focused ? icons.DeliveryMenuActive : icons.deliveryMenu;
+                        iconName = focused ? icons.deliveryMenuActive : icons.deliveryMenu;
                     } else if (route.name === 'Account') {
                         iconName = focused ? icons.accountMenuActive : icons.accountMenu;
                     } else if (route.name === 'Entertaiment') {
@@ -156,6 +156,10 @@ export default function Navigate() {
             <Stack.Screen
                 name="Begin"
                 component={Begin}
+            />
+             <Stack.Screen
+                name="PersonalCabenet"
+                component={PersonalCabenet}
             />
 
             <Stack.Screen

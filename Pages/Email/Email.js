@@ -99,7 +99,7 @@ export default function Email({navigation}) {
                 }
 
                 <View style={{marginBottom: isShowKeyboard ? 5 : 20}}>
-                    <BtnButton onPress={() => {sendEmail(email)}} title={t('continue')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', opacity: disable  ? .7 : 1, pointerEvents: disable ? 'none' : 'auto'}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
+                    <BtnButton onPress={() => {sendEmail(email); navigation.navigate('Results')}} title={t('continue')} buttonStyle={{backgroundColor: '#F55926',borderWidth: 2, borderColor: '#F55926', opacity: disable  ? .7 : 1, pointerEvents: disable ? 'none' : 'auto'}} textStyle={{color: 'rgba(244, 237, 225, 1)', }}/>
                     <BtnButton onPress={() => navigation.navigate('Auth')} title={t('logIn')} buttonStyle={{marginTop: isShowKeyboard ? 5 : 15, marginBottom: isShowKeyboard ? 5 : 20 }} textStyle={{color: 'black'}}/>
                 </View>
 
