@@ -6,7 +6,7 @@ import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import{icons} from "./../../constants";
 
 import styled from "./header.scss";
-import {languages} from '../../actions';
+import {langType} from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import i18next from './../../services/i18next';
 
@@ -16,11 +16,13 @@ const Header = ({onPress, isBack=true, isButtons=true, isWhite=false, lang=false
     let language = useSelector(state => state.language);
     const dispatch = useDispatch();
     const changeLng = () => {
-		dispatch(languages())
+        dispatch(langType())
 		if(language =='ar') {
+           
 			i18next.changeLanguage('en');
 		} else {
 			i18next.changeLanguage('ar');
+            // dispatch(langType("ar"))
 		}
 	  };
 

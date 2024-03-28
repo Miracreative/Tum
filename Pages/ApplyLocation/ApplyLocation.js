@@ -159,7 +159,7 @@ export default function ApplyLocation({ navigation }) {
                                     onFocus={() => {setIsShowKeyboard(true)}}
                                     value={instructions}
                                     onSubmitEditing={() => {Keyboard.dismiss; setIsShowKeyboard(false) }}/>
-                                <BtnButton onPress={() => {navigation.navigate('Auth')
+                                <BtnButton onPress={() => {navigation.navigate('DeliveryDetails')
                                                             dispatch(area1(area))
                                                             dispatch(street1(street))
                                                             dispatch(build1(building))
